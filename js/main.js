@@ -35,4 +35,17 @@ var app = new Vue({
       },
     ],
   },
+  methods: {
+    comprar(course) {
+      console.log("A função funcionou! :)");
+      if (course.price > 0) {
+        this.shoppingList.push(course);
+      } else {
+        this.studyingList.push(course);
+      }
+    },
+    // dizerOi() {
+    //   document.getElementById("oi").textContent = "Oi";
+    // },
+  },
 });

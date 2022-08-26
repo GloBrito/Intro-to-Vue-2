@@ -22,7 +22,7 @@
         <h1 class="title center ma-3">VueJS - Top Cursos</h1>
         <div class="cart">
           <i class="fa-solid fa-cart-shopping"></i>
-          <span class="cart-counter buy">0</span>
+          <span class="cart-counter buy">{{shoppingList.length}}</span>
           <i class="fa-solid fa-graduation-cap ml-2"></i>
           <span class="cart-counter study">0</span>
         </div>
@@ -40,6 +40,7 @@
             :key="course.id"
             class="course-item ma-3"
           >
+            <!-- <div id="oi"></div> -->
             <div class="course">
               <div class="course-image">
                 <img :src="course.image" alt="" />
@@ -61,6 +62,7 @@
                   </p>
                   <span>{{ course.duration }} horas</span>
                   <button
+                    @click="comprar(course)"
                     :class="{btn: true, 'btn-primary': course.active}"
                     :disabled="!course.active"
                   >
