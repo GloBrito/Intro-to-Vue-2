@@ -12,6 +12,7 @@ var app = new Vue({
         duration: 42,
         active: true,
         price: 100,
+        cor: "#000ddd",
       },
       {
         id: 2,
@@ -31,10 +32,14 @@ var app = new Vue({
           "Entendendo Git através dos primeiros comandos via linha de comando.",
         duration: 21,
         active: true,
-        price: 0,
+        price: 100,
       },
     ],
+    addCor: {
+      corPadrao: "#1addff",
+    },
   },
+
   methods: {
     addCourse(course) {
       /**
