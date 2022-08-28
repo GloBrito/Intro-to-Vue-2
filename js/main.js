@@ -58,7 +58,13 @@ var app = new Vue({
   },
   computed: {
     studentNote() {
-      return "Deixa aqui uma nota para o estudadente...";
+      let cursoList = this.shoppingList;
+      if (cursoList.length >= 10) {
+        return "Opps! Não seria melhor focar os estudos em apenas algumas tecnologias?";
+      } else if (cursoList.length > 0) {
+        return "Muito bem, você já pode iniciar seu estudo!";
+      } else cursoList.length < 0;
+      return "Selecione um ou mais cursos e bora estudar!";
     },
   },
 });
