@@ -58,7 +58,7 @@ var app = new Vue({
   },
   computed: {
     studentNote() {
-      let cursoList = this.shoppingList;
+      let cursoList = this.studyingList;
       if (cursoList.length >= 10) {
         return "Opps! Não seria melhor focar os estudos em apenas algumas tecnologias?";
       } else if (cursoList.length > 0) {
